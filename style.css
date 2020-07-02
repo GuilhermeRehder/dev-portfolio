@@ -6,10 +6,40 @@
     margin: 0;
     padding: 0;
     border: none;
+    text-decoration: none;
+    list-style: none;
 }
 
 body {
     font-size: 16px;
+}
+
+:root {
+    --primary-font: 'Dosis', sans-serif;
+    --secundary-font: 'Poiret One', sans-serif;
+    --action-font: ;
+}
+
+.hamburguer {
+/*   background-color: blue;*/
+    position: fixed;
+    z-index: 2;
+    width: 3rem;
+    height: 3rem;
+    top: 1.5rem;
+    right: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.lines {
+    background-color: #007991;
+    width: 100%;
+    height: 0.1rem;
+    box-shadow: 0.1rem 0.1rem 1px rgba(0, 0, 0, 0.4);
+
 }
 
 header {
@@ -50,19 +80,21 @@ header {
 
 .banner h1 {
     color: white;
-    font-family: 'Dosis', serif;
+    font-family: var(--primary-font);
     font-weight: 300;
     font-size: 5rem;
     text-shadow: 0.2rem 0.2rem 2px rgba(0, 0, 0, 0.4);
     margin-bottom: .5rem;
+    animation: moveBanner 1s 0.1s forwards;
 }
 
 .banner p {
     color: white;
-    font-family: 'Poiret One', serif;
+    font-family: var(--secundary-font);
     font-size: 3rem;
     text-shadow: 0.1rem 0.1rem rgba(0, 0, 0, 0.4);
     margin-bottom: 1.5rem;
+    animation: moveBanner 1s 0.3s forwards;
 }
 
 .banner button {
@@ -70,7 +102,7 @@ header {
     background: -webkit-linear-gradient(to left, #78CCD1, #007991);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to left, #78CCD1, #007991); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     
-    font-family: 'Dosis', serif;
+    font-family: var(--primary-font);
     font-weight: 300;
     color: white;
     text-transform: uppercase;
@@ -79,11 +111,57 @@ header {
     padding: 1rem 2rem;
     outline:none;
     cursor: pointer;
-
+    animation: moveBanner 1s 0.5s forwards;
 }
 
 .banner button:hover {
-    background: #007991;
+    background: #78CCD1;
+}
+
+@keyframes moveBanner {
+    0% {
+        transform: translateY(10rem) rotateY(-30deg);
+        transform-origin: top left;
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0) rotateY(0);
+        opacity: 1;
+    }
+}
+
+.sidebar {
+    width: 20rem;
+    height: 100vh;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: right;
+}
+
+.menu-item {
+    margin-bottom: 0.5rem;
+}
+
+.menu-link {
+    font-family: var(--primary-font);
+    font-weight: 600;
+    font-size: 2rem;
+    color: #007991;
+    transition: color 0.2s;
+}
+
+.menu-link:hover {
+    color: #78CCD1;
 }
 
 
