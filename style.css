@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600&family=Poiret+One&display=swap');
 
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/brands.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css');
+
+/* Não funciona (?) @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/brands.min.css'); */
 
 * {
     margin: 0;
@@ -24,8 +26,8 @@ body {
 /*   background-color: blue;*/
     position: fixed;
     z-index: 2;
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
     top: 1.5rem;
     right: 1.5rem;
     display: flex;
@@ -37,7 +39,7 @@ body {
 .lines {
     background-color: #007991;
     width: 100%;
-    height: 0.1rem;
+    height: 0.2rem;
     box-shadow: 0.1rem 0.1rem 1px rgba(0, 0, 0, 0.4);
 
 }
@@ -161,6 +163,30 @@ header {
 }
 
 .menu-link:hover {
+    color: #78CCD1;
+}
+
+.social-media {
+    position: absolute;
+    height: 2.5rem;
+    width: 100%;
+    bottom: 1.5rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.social-media i {
+    color: #007991;
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.2s;
+}
+
+.social-media i:hover {
     color: #78CCD1;
 }
 
