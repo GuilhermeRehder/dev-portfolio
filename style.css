@@ -50,8 +50,8 @@ body {
 }
 
 .show-menu .lines:nth-child(2) {
-    opacity: 0;
-    visibility: hidden;
+    transform: rotate(45deg);
+    box-shadow: none;
 }
 
 .show-menu .lines:nth-child(3) {
