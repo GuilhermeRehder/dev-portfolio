@@ -41,7 +41,22 @@ body {
     width: 100%;
     height: 0.2rem;
     box-shadow: 0.1rem 0.1rem 1px rgba(0, 0, 0, 0.4);
+    transition: transform 0.5s;
+}
 
+.show-menu .lines:nth-child(1) {
+    transform: translate(0, 0.55rem) rotate(45deg);
+    box-shadow: none;
+}
+
+.show-menu .lines:nth-child(2) {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.show-menu .lines:nth-child(3) {
+    transform: translate(0, -0.55rem) rotate(-45deg);
+    box-shadow: none;
 }
 
 header {
@@ -138,8 +153,13 @@ header {
     background-color: white;
     position: fixed;
     top: 0;
-    right: 0;
+    right: -20rem;
     z-index: 1;
+    transition: all 0.5s;
+}
+
+.show-menu .sidebar {
+    right: 0;
 }
 
 .menu {
