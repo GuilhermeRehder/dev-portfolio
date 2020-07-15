@@ -21,9 +21,8 @@ body {
 }
 
 .hamburguer {
-/*   background-color: blue;*/
     position: fixed;
-    z-index: 2;
+    z-index: 1000;
     width: 2rem;
     height: 2rem;
     top: 1.5rem;
@@ -55,6 +54,36 @@ body {
 .show-menu .lines:nth-child(3) {
     transform: translate(0, -0.55rem) rotate(-45deg);
     box-shadow: none;
+}
+
+.hamburguer span {
+    position: absolute;
+    right: 3rem;
+    width: 5rem;
+    height: 2rem;
+    font-family: var(--primary-font);
+    font-weight: 300;
+    color: white;
+    background-color: #007991;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    
+}
+
+.hamburguer span::after {
+    content: "";
+    position: absolute;
+    border-left: 0.5rem solid #007991;
+    border-top: 0.5rem solid transparent;
+    border-right: 0.5rem solid transparent;
+    border-bottom: 0.5rem solid transparent;
+    right: -1rem;
+}
+
+.show-menu .hamburguer:hover span {
+    opacity: 1;
 }
 
 header {
