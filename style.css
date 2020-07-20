@@ -38,7 +38,11 @@ body {
     width: 100%;
     height: 0.2rem;
     box-shadow: 0.1rem 0.1rem 1px rgba(0, 0, 0, 0.4);
-    transition: transform 0.5s;
+    transition: transform 0.5s, background-color 0.2s;
+}
+
+.hamburguer:hover .lines {
+    background-color: #78CCD1;
 }
 
 .show-menu .lines:nth-child(1) {
@@ -69,7 +73,7 @@ body {
     justify-content: center;
     align-items: center;
     opacity: 0;
-    
+    visibility: hidden;
 }
 
 .hamburguer span::after {
@@ -84,6 +88,7 @@ body {
 
 .show-menu .hamburguer:hover span {
     opacity: 1;
+    visibility: visible;
 }
 
 header {
@@ -151,9 +156,9 @@ header {
     color: white;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
-    border-radius: 5px;
+    border-radius: 0.3rem;
     padding: 1rem 2rem;
-    outline:none;
+    outline: none;
     cursor: pointer;
     animation: moveBanner 1s 0.5s forwards;
 }
@@ -235,6 +240,10 @@ header {
 
 .social-media i:hover {
     color: #78CCD1;
+}
+
+.secao-header {
+    position: relative;
 }
 
 .secao-header h1 {
@@ -321,4 +330,95 @@ header {
     object-fit: cover;
 }
 
+.secao-projetos {
+    position: relative;
+}
 
+.projetos {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card {
+    position: relative;
+    width: 20rem;
+    height: 30rem;
+}
+
+.card-img-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: #262626;
+    border-radius: 0.5rem;
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.card:hover .card-img-wrapper img {
+    opacity: 0.5;
+}
+
+.card-info {
+    position: absolute;
+    bottom: 0rem;
+    left: 2rem;
+    text-shadow: 0.1rem 0.1rem rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+
+.card:hover .card-info {
+    bottom: 2rem;
+    opacity: 1;
+    visibility: visible;
+}
+
+.card-info h2 {
+    font-family: var(--primary-font);
+    font-weight: 500;
+    color: white;
+}
+
+.card-info h3 {
+    font-family: var(--primary-font);
+    font-weight: 400;
+    color: white;
+    margin-top: 0.2rem;
+}
+
+.card-info p {
+    font-family: var(--secundary-font);
+    color: white;
+    margin-top: 0.5rem;
+}
+
+.card-info button {
+    background: #007991;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #78CCD1, #007991);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #78CCD1, #007991); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    font-family: var(--primary-font);
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: white;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    padding: 0.8rem 1.6rem;
+    margin-top: 1rem;
+    border-radius: 0.3rem;
+    outline: none;
+    cursor: pointer;
+    animation: moveBanner 1s 0.5s forwards;
+}
+
+.card-info button:hover {
+    background: #78CCD1;
+}
