@@ -10,6 +10,10 @@
     list-style: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-size: 16px;
 }
@@ -21,15 +25,15 @@ body {
 }
 
 .hamburguer {
-    position: fixed;
-    z-index: 1000;
     width: 2rem;
     height: 2rem;
+    position: fixed;
     top: 1.5rem;
     right: 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    z-index: 150;
     cursor: pointer;
 }
 
@@ -186,7 +190,7 @@ header {
     position: fixed;
     top: 0;
     right: -20rem;
-    z-index: 1;
+    z-index: 100;
     transition: all 0.5s;
 }
 
@@ -627,4 +631,24 @@ footer {
     font-family: var(--secundary-font);
     font-size: 1rem;
     font-weight: 600;
+}
+
+#link-topo {
+    width: 2rem;
+    height: 2rem;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    background-color: #007991;
+    padding: 0.5rem;
+    border-radius: 50%;
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    z-index: 50;
+}
+
+#link-topo:hover {
+    background-color: #78CCD1;
+
 }
