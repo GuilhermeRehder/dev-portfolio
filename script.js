@@ -8,11 +8,14 @@ document.querySelector("#layout-sim").addEventListener("change", atualizaPreco);
 document.querySelector("#layout-nao").addEventListener("change", atualizaPreco);
 document.querySelector("#prazo").addEventListener("change", function(){
     const prazo = document.querySelector("#prazo").value;
-    document.querySelector("label[for=prazo]").innerHTML = "Prazo (" + prazo + " semanas)";
+
+    if(document.querySelector("#prazo").value == 1) {
+        document.querySelector("label[for=prazo]").innerHTML = "Prazo (" + prazo + " semana)";
+    } else {
+        document.querySelector("label[for=prazo]").innerHTML = "Prazo (" + prazo + " semanas)";
+    }
     atualizaPreco();
 })
-
-
 
 function atualizaPreco(){
     const quant = document.querySelector("#quant").value;
