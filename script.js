@@ -31,3 +31,13 @@ function atualizaPreco(){
 
     document.querySelector("#preco").innerHTML = "R$ " + preco.toFixed(2);
 }
+
+window.onscroll = function() {scroll()};
+
+function scroll(){
+    if (window.pageYOffset > 300) {
+        document.getElementById("link-topo").style.cssText = "opacity: 1; visibility: visible";
+    } else {
+        document.getElementById("link-topo").style.cssText = "opacity: 0; visibility: hidden";
+    }
+}
